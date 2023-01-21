@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+    :root{
+      --Pale: hsl(225, 100%, 94%);
+      --Bright: hsl(245, 75%, 52%);
+      --Very-pale : hsl(225, 100%, 98%);
+      --Desaturated : hsl(224, 23%, 55%);
+      --Dark : hsl(223, 47%, 23%);
+    }
+    
+    .design {
+      background-image: url(images/pattern-background-mobile.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: grid;
+      justify-content: center;
+    }
+    .container{
+      display: grid;
+      justify-content: center;
+      max-width: 100%;
+      margin: 30px 10px;
+      width: 375px;
+      border-radius:10px ;
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+    }
+    /* 479px */
+    @media (min-width:600px) { 
+      .design {
+        display: grid;
+        justify-content: center;
+        padding: 50px 10px ;
+        max-width: 1440px;
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: contain;
+      }
+      body{
+      background-color: var(--Pale);
+    }
+    .container{
+
+    }
+    }
+    .music{
+      width: 100%;
+      border-radius:10px 10px 0 0 ;
+    }
+    .container h1 {
+      margin: 20px 0;
+    }
+    .container h1+p{
+      font-size: 16px;
+    }
+    .box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    .box2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 150px;
+    }
+    input[type="submit"],input[type="button"]{
+      color: rgb(100, 100, 100);
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      background-color: transparent;
+      font-weight: bold;
+    }
+    input[type="submit"]{
+      background-color: var(--Bright);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="design">
+  <div class="container">
+    <img class="music" src="images/illustration-hero.svg" alt="">
+    <h1>Order Summary</h1>
+    <p>You can now listen to millions of <br> songs ,audiobooks, and podcasts on <br> any device anywhere you like!</p>
+      <div class="box">
+        <div class="box2">
+          <img src="images/icon-music.svg" alt="">
+          <div class="text">
+            <h4>Annual Plan</h4>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        <a href="#">Change</a>
+      </div>
+      <input type="submit" value="Proceed to Payment">
+      <input type="button" value="Cancel Order">
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/mohamedibrahim5776?tab=repositories">Mohamed Ibrahim</a>.
+  </div>
+</div>
+</body>
+</html>
